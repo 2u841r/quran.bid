@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { quranData, slugToChapter } from '../../quran-utils'
+import { quranData, slugToChapter } from '../../../utils/quran-utils'
 
 export async function GET(request, { params }) {
   const { slug } = params
