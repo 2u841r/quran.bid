@@ -12,3 +12,5 @@ npm run dev
 # or
 pnpm run dev
 ```
+
+![](https://rs2.deno.dev/2u841r/quran.bid)
