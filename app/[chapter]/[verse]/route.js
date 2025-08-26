@@ -21,7 +21,7 @@ async function trackPlausibleEvent(request, eventName, props = {}) {
       props: props,
     }
 
-    await fetch('https://ppp.qawmputer.io/api/event', {
+    await fetch('https://ppp.qawmputer.com/api/event', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
