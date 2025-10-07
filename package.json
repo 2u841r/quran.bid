@@ -19,7 +19,7 @@
     "next-plausible": "^3.12.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "unsocial": "^1.0.4",
+    "unsocial": "^1.0.6",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
