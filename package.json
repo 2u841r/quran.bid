@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "sleep 3 && npm run open",
+    "predev": "sleep 8 && npm run open",
     "dev": "next dev --turbopack",
     "check": "node app/utils/check-array.js",
     "remove": "node -e \"const { applyCleanupToFile } = require('./app/utils/remove-duplicate.js'); applyCleanupToFile().then(() => console.log('Duplicates removed successfully!'));\"",
@@ -19,7 +19,7 @@
     "next-plausible": "^3.12.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "unsocial": "^1.0.1",
+    "unsocial": "^1.0.4",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
