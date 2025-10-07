@@ -27,8 +27,8 @@ importers:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
       unsocial:
-        specifier: ^1.0.4
-        version: 1.0.4(react@19.1.0)
+        specifier: ^1.0.6
+        version: 1.0.6(react@19.1.0)
       xlsx:
         specifier: ^0.18.5
         version: 0.18.5
@@ -775,8 +775,8 @@ packages:
     resolution: {integrity: sha512-VGXBUVwxKMBUznyffQweQABPRRW1vHZAbadFZud4pLFAqRGvv/96vafgjWFqzourzr8YonlQiPgH0YCJfawoGQ==}
     engines: {node: '>=12'}
 
-  unsocial@1.0.4:
-    resolution: {integrity: sha512-Vo+H0HYmCgaqHtpiL0zTxMIPedc8Oz0q6X+JMzTljdZjhEL+SCcN3c1HheQTKIJL7ehCd8TMCFdUevwuTuTQjA==}
+  unsocial@1.0.6:
+    resolution: {integrity: sha512-F79KPB8yleCERRwdxgR1k+mEq7Rv4POVWteqxeIOq1LXCrGD6tQz0QDQWw//QT0PiRL6N14x6/YbcQ9CCcfIQA==}
     peerDependencies:
       react: '>=16.8.0'
 
@@ -1415,7 +1415,7 @@ snapshots:
     dependencies:
       crypto-random-string: 4.0.0
 
-  unsocial@1.0.4(react@19.1.0):
+  unsocial@1.0.6(react@19.1.0):
     dependencies:
       react: 19.1.0
 
