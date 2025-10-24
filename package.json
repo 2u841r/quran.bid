@@ -3,32 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predev": "sleep 8 && npm run open",
     "dev": "next dev --turbopack",
     "check": "node app/utils/check-array.js",
     "remove": "node -e \"const { applyCleanupToFile } = require('./app/utils/remove-duplicate.js'); applyCleanupToFile().then(() => console.log('Duplicates removed successfully!'));\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "open": "open-cli http://localhost:3000"
   },
   "dependencies": {
     "csv-parse": "^5.6.0",
-    "next": "15.2.2",
+    "next": "16.0.0",
     "next-axiom": "^1.9.2",
     "next-plausible": "^3.12.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "unsocial": "^1.0.6",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "16.0.0",
     "open-cli": "^8.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.2",
+      "@types/react-dom": "19.2.2"
+    }
   }
 }
