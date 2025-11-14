@@ -5,14 +5,17 @@ export const quranData = {
     "versesCount": 7,
     "translatedName": "The Opener",
     "slug": [
-      "al-fatihah",
       "fatihah",
       "fatiha",
       "fatehah",
       "fateha",
+      "faatihah",
+      "faatiha",
+      "faatehah",
+      "faateha",
       "opening",
       "opener",
-      "ftih"
+      "ftiha"
     ]
   },
   "2": {
@@ -21,17 +24,14 @@ export const quranData = {
     "versesCount": 286,
     "translatedName": "The Cow",
     "slug": [
-      "bqr",
-      "bkr",
-      "bqrh",
-      "bkrh",
       "baqarah",
       "baqara",
       "bakarah",
       "bakara",
-      "al-baqarah",
-      "al-bakarah",
-      "al-bakara",
+      "bqrh",
+      "bkrh",
+      "bqr",
+      "bkr",
       "cow"
     ]
   },
@@ -41,14 +41,24 @@ export const quranData = {
     "versesCount": 200,
     "translatedName": "Family of Imran",
     "slug": [
-      "imrn",
-      "imr",
       "ali-imran",
-      "al-imran",
+      "aliimran",
+      "ale-imran",
+      "aleimran",
+      "alu-imran",
+      "aluimran",
+      "aali-imran",
+      "aaliimran",
+      "aale-imran",
+      "aaleimran",
+      "aalu-imran",
+      "aaluimran",
+      "aimran",
       "imran",
       "family-imran",
       "ali-imrn",
-      "aal-imran"
+      "imrn",
+      "imr"
     ]
   },
   "4": {
@@ -57,13 +67,15 @@ export const quranData = {
     "versesCount": 176,
     "translatedName": "The Women",
     "slug": [
-      "nsa",
-      "an-nisa",
       "nisa",
-      "women",
-      "an-nisa'",
       "nisaa",
-      "niss"
+      "an-nisa",
+      "an-nisaa",
+      "annisa",
+      "annisaa",
+      "nisa'",
+      "women",
+      "nsa"
     ]
   },
   "5": {
@@ -72,18 +84,18 @@ export const quranData = {
     "versesCount": 120,
     "translatedName": "The Table Spread",
     "slug": [
-      "mdh",
-      "midh",
-      "medh",
-      "mydh",
-      "mydah",
-      "al-maidah",
       "maidah",
+      "maaidah",
       "maedah",
       "maydah",
       "ma'idah",
       "table",
       "maid",
+      "mdh",
+      "midh",
+      "medh",
+      "mydh",
+      "mydah",
       "table-spread"
     ]
   },
@@ -93,12 +105,11 @@ export const quranData = {
     "versesCount": 165,
     "translatedName": "The Cattle",
     "slug": [
-      "anm",
       "anam",
+      "an'am",
       "an-am",
       "anyam",
-      "al-anam",
-      "an'am",
+      "anm",
       "cattle"
     ]
   },
@@ -108,13 +119,12 @@ export const quranData = {
     "versesCount": 206,
     "translatedName": "The Heights",
     "slug": [
-      "arf",
       "araf",
       "araaf",
       "arof",
-      "al-araf",
       "a'raf",
       "heights",
+      "arf",
       "ar'f"
     ]
   },
@@ -124,13 +134,12 @@ export const quranData = {
     "versesCount": 75,
     "translatedName": "The Spoils of War",
     "slug": [
-      "nfl",
-      "anfl",
-      "al-anfal",
       "anfal",
+      "anfaal",
+      "anfl",
+      "nfl",
       "spoils",
-      "spoils-war",
-      "anf"
+      "spoils-war"
     ]
   },
   "9": {
@@ -139,8 +148,6 @@ export const quranData = {
     "versesCount": 129,
     "translatedName": "The Repentance",
     "slug": [
-      "twbh",
-      "tobh",
       "tawbah",
       "tawba",
       "at-tawbah",
@@ -148,6 +155,8 @@ export const quranData = {
       "taoba",
       "at-taoba",
       "at-taobah",
+      "twbh",
+      "tobh",
       "repentance",
       "twb",
       "tob",
@@ -155,7 +164,7 @@ export const quranData = {
       "baraat",
       "barayat",
       "baraah",
-      "barayah",
+      "barayah"
     ]
   },
   "10": {
@@ -164,11 +173,11 @@ export const quranData = {
     "versesCount": 109,
     "translatedName": "Jonah",
     "slug": [
-      "yns",
       "yunus",
       "younus",
       "yeonus",
       "yinus",
+      "yns",
       "jonah",
       "yonus"
     ]
@@ -179,13 +188,9 @@ export const quranData = {
     "versesCount": 123,
     "translatedName": "Hud",
     "slug": [
-      "hud",
-      "hd",
       "hood",
-      "alhood",
-      "al-hood",
-      "al-hud",
-      "alhud"
+      "hud",
+      "hd"
     ]
   },
   "12": {
@@ -194,13 +199,13 @@ export const quranData = {
     "versesCount": 111,
     "translatedName": "Joseph",
     "slug": [
-      "ysf",
-      "yusf",
       "yusuf",
       "yousuf",
       "yusoof",
       "yousoof",
       "yosef",
+      "ysf",
+      "yusf",
       "joseph",
       "yousef"
     ]
@@ -212,13 +217,11 @@ export const quranData = {
     "translatedName": "The Thunder",
     "slug": [
       "rad",
-      "radd",
-      "raad",
-      "arrad",
+      "ra'd",
       "rod",
       "arrod",
+      "arrad",
       "ar-rad",
-      "ra'd",
       "thunder",
       "rd",
       "ar-r'd"
@@ -233,9 +236,11 @@ export const quranData = {
       "ibrm",
       "ibrhm",
       "ibrahim",
+      "ibraahim",
       "ibrohim",
       "abraham",
       "ebrahim",
+      "ebraahim",
       "ebrahem"
     ]
   },
@@ -251,14 +256,6 @@ export const quranData = {
       "hzr",
       "hizir",
       "hijir",
-      "al-hijr",
-      "alhijr",
-      "al-hijir",
-      "alhijir",
-      "al-hizr",
-      "alhizr",
-      "al-hizir",
-      "alhizir",
       "rocky-tract",
       "stone"
     ]
@@ -289,7 +286,6 @@ export const quranData = {
       "isr",
       "esra",
       "esr",
-      "al-isra",
       "night-journey",
       "bani-israil",
       "bani israil",
@@ -313,12 +309,6 @@ export const quranData = {
       "kahf",
       "khf",
       "kahaf",
-      "alkahaf",
-      "alkahf",
-      "alkhaf",
-      "alkhf",
-      "al-kahf",
-      "al-kahaf",
       "cave"
     ]
   },
@@ -368,12 +358,9 @@ export const quranData = {
       "anbiya",
       "anbya",
       "ambia",
-      "al-ambia",
       "amb",
       "ambiya",
-      "al-anbya",
-      "al-anbiya",
-      "al-anbiyaa",
+      "anbiyaa",
       "prophets",
       "anby"
     ]
@@ -386,7 +373,6 @@ export const quranData = {
     "slug": [
       "hajj",
       "haj",
-      "al-hajj",
       "hj",
       "hjj",
       "pilgrimage",
@@ -394,12 +380,7 @@ export const quranData = {
       "hojj",
       "hozz",
       "hazz",
-      "al-hazz",
-      "al-hojj",
-      "alhozz",
-      "alhojj",
-      "al-hozz",
-      "al-hoz"
+      "hoz"
     ]
   },
   "23": {
@@ -408,12 +389,8 @@ export const quranData = {
     "versesCount": 118,
     "translatedName": "The Believers",
     "slug": [
-      "al-muminun",
-      "almuminun",
-      "mu'minun",
       "muminun",
-      "almuminoon",
-      "al-muminoon",
+      "mu'minun",
       "muminoon",
       "moominoon",
       "moominun",
@@ -436,11 +413,7 @@ export const quranData = {
       "light",
       "noor",
       "an-noor",
-      "annoor",
-      "alnoor",
-      "al-noor",
-      "al-nur",
-      "alnur"
+      "annoor"
     ]
   },
   "25": {
@@ -450,15 +423,11 @@ export const quranData = {
     "translatedName": "The Criterion",
     "slug": [
       "frqn",
-      "al-furqan",
       "furqan",
       "furqaan",
-      "alfurqan",
       "criterion",
       "forqan",
-      "furkan",
-      "al-furkan",
-      "al-furqaan"
+      "furkan"
     ]
   },
   "26": {
@@ -491,10 +460,7 @@ export const quranData = {
       "ant",
       "ants",
       "an-namel",
-      "alnaml",
-      "al-naml",
       "namol",
-      "al-namol",
       "annamol"
     ]
   },
@@ -505,17 +471,9 @@ export const quranData = {
     "translatedName": "The Stories",
     "slug": [
       "qasas",
-      "al-qasas",
-      "alqasas",
       "qosos",
-      "alqosos",
-      "al-qosos",
       "kosos",
-      "alsosos",
-      "al-kosos",
       "kasas",
-      "alkasas",
-      "al-kasas",
       "qss",
       "kss",
       "stories"
@@ -529,11 +487,7 @@ export const quranData = {
     "slug": [
       "ankbt",
       "ankabut",
-      "al-ankabut",
-      "alankabut",
       "ankaboot",
-      "al-ankaboot",
-      "alankaboot",
       "spider"
     ]
   },
@@ -549,8 +503,6 @@ export const quranData = {
       "room",
       "ar-room",
       "arroom",
-      "alroom",
-      "al-room",
       "rm",
       "romans"
     ]
@@ -617,9 +569,7 @@ export const quranData = {
     "versesCount": 73,
     "translatedName": "The Combined Forces",
     "slug": [
-      "al-ahzab",
       "ahzab",
-      "al-ahjab",
       "ahjab",
       "hjb",
       "combined-forces",
@@ -924,15 +874,12 @@ export const quranData = {
     "versesCount": 37,
     "translatedName": "The Crouching",
     "slug": [
-      "al-jathiyah",
-      "al jathiyah",
       "jathiyah",
       "jthyh",
       "crouching",
       "kneeling",
-      "al-jasiyah",
-      "al jasiyah",
       "jasiyah",
+      "jachiyah",
       "jsyh"
     ]
   },
@@ -942,16 +889,13 @@ export const quranData = {
     "versesCount": 35,
     "translatedName": "The Wind-Curved Sandhills",
     "slug": [
-      "al-ahqaf",
-      "al ahqaf",
       "ahqaf",
-      "al-ahkaf",
-      "al ahkaf",
       "ahkaf",
+      "ahqaaf",
+      "ahkaaf",
       "hqf",
       "sandhills",
-      "dunes",
-      "al-ahqaaf"
+      "dunes"
     ]
   },
   "47": {
@@ -971,7 +915,7 @@ export const quranData = {
       "qital",
       "qitaal",
       "kital",
-      "kitaal",
+      "kitaal"
     ]
   },
   "48": {
@@ -980,15 +924,11 @@ export const quranData = {
     "versesCount": 29,
     "translatedName": "The Victory",
     "slug": [
-      "al-fath",
-      "alfath",
       "fath",
-      "al-fatah",
-      "alfatah",
       "fatah",
       "fth",
       "conquest",
-      "al-fateh"
+      "fateh"
     ]
   },
   "49": {
@@ -997,17 +937,13 @@ export const quranData = {
     "versesCount": 18,
     "translatedName": "The Rooms",
     "slug": [
-      "al-hujurat",
-      "alhujurat",
       "hujurat",
       "hjrt",
-      "al-huzurat",
-      "alhuzurat",
       "huzurat",
       "hzrt",
       "rooms",
       "apartments",
-      "al-hojoraat"
+      "hojoraat"
     ]
   },
   "50": {
@@ -1082,16 +1018,12 @@ export const quranData = {
     "versesCount": 55,
     "translatedName": "The Moon",
     "slug": [
-      "al-qamar",
-      "alqamar",
       "qamar",
       "qmr",
-      "al-kamar",
-      "alkamar",
       "kamar",
       "kmr",
       "moon",
-      "al-qamer"
+      "qamer"
     ]
   },
   "55": {
@@ -1117,39 +1049,28 @@ export const quranData = {
     "versesCount": 96,
     "translatedName": "The Inevitable",
     "slug": [
-      "al-waqiah",
-      "alwaqiah",
       "waqiah",
       "waqi'ah",
-      "al-waqia",
-      "alwaqia",
       "waqia",
       "waqi'a",
       "waqea",
       "waqeya",
-      "al-waqiyah",
-      "alwaqiyah",
+      "waqiyah",
       "waqi'yah",
-      "alwakiah",
-      "al-wakiah",
       "wakiah",
       "waki'ah",
-            "al-waqiya",
-      "alwaqiya",
+      "waqiya",
       "waqi'ya",
-      "alwakia",
-      "al-wakia",
       "wakia",
       "waki'a",
       "wakea",
       "wakeya",
-      "alwakiyah",
-      "al-wakiyah",
+      "wakiyah",
       "waki'yah",
       "wqyh",
       "wkyh",
       "event",
-      "al-waaqi'a"
+      "waaqi'a"
     ]
   },
   "57": {
@@ -1158,11 +1079,7 @@ export const quranData = {
     "versesCount": 29,
     "translatedName": "The Iron",
     "slug": [
-      "al-hadid",
-      "alhadid",
       "hadid",
-      "al-hadeed",
-      "alhadeed",
       "hadeed",
       "hdd",
       "iron"
@@ -1174,36 +1091,20 @@ export const quranData = {
     "versesCount": 22,
     "translatedName": "The Pleading Woman",
     "slug": [
-      "al-mujadila",
-      "almujadila",
       "mujadila",
-      "al-mujadilah",
-      "almujadilah",
       "mujadilah",
       "mjdlh",
-      "al-mujadala",
-      "almujadala",
       "mujadala",
-      "al-mujadalah",
-      "almujadalah",
       "mujadalah",
-      "al-muzadila",
-      "almuzadila",
       "muzadila",
       "mzdlh",
-      "al-muzadala",
-      "almuzadala",
       "muzadala",
-      "al-muzadilah",
-      "almuzadilah",
       "muzadilah",
       "mzdl",
-      "al-muzadalah",
-      "almuzadalah",
       "muzadalah",
       "pleading",
       "woman",
-      "al-mujaadila"
+      "mujaadila"
     ]
   },
   "59": {
@@ -1212,15 +1113,13 @@ export const quranData = {
     "versesCount": 24,
     "translatedName": "The Exile",
     "slug": [
-      "al-hashr",
       "hashr",
       "hshr",
-      "al-hasr",
       "hasr",
       "hsr",
       "exile",
       "banishment",
-      "al-hasher"
+      "hasher"
     ]
   },
   "60": {
@@ -1229,23 +1128,15 @@ export const quranData = {
     "versesCount": 13,
     "translatedName": "She that is to be examined",
     "slug": [
-      "al-mumtahanah",
-      "almumtahanah",
       "mumtahanah",
-      "al-mumtahana",
-      "almumtahana",
       "mumtahana",
       "mmthnh",
       "mmthn",
-      "al-mumtahinah",
-      "almumtahinah",
       "mumtahinah",
-      "al-mumtahina",
-      "almumtahina",
       "mumtahina",
       "examined",
       "tested",
-      "al-momtahana"
+      "momtahana"
     ]
   },
   "61": {
@@ -1277,27 +1168,19 @@ export const quranData = {
     "versesCount": 11,
     "translatedName": "The Congregation, Friday",
     "slug": [
-      "al-jumuah",
-      "aljumuah",
-      "jumu'ah",
       "jumuah",
+      "jumu'ah",
       "jmh",
-      "al-zumuah",
-      "alzumuah",
-      "zumu'ah",
       "zumuah",
-      "al-jumah",
-      "aljumah",
-      "jum'ah",
+      "zumu'ah",
       "jumah",
-      "al-zumah",
-      "alzumah",
-      "zum'ah",
+      "jum'ah",
       "zumah",
+      "zum'ah",
       "zmh",
       "friday",
       "congregation",
-      "al-jomo'a"
+      "jomo'a"
     ]
   },
   "63": {
@@ -1306,19 +1189,13 @@ export const quranData = {
     "versesCount": 11,
     "translatedName": "The Hypocrites",
     "slug": [
-      "al-munafiqun",
-      "almunafiqun",
       "munafiqun",
-      "al-munafiqoon",
-      "almunafiqoon",
       "munafiqoon",
-      "al-munafikun",
-      "almunafikun",
       "munafikun",
       "mnfkn",
       "mnfqn",
       "hypocrites",
-      "al-monafeqoon"
+      "monafeqoon"
     ]
   },
   "64": {
@@ -1379,15 +1256,13 @@ export const quranData = {
     "versesCount": 30,
     "translatedName": "The Sovereignty",
     "slug": [
-      "al-mulk",
-      "almulk",
       "mulk",
       "mlk",
       "muluk",
       "moluk",
       "sovereignty",
       "dominion",
-      "al-molk"
+      "molk"
     ]
   },
   "68": {
@@ -1396,21 +1271,16 @@ export const quranData = {
     "versesCount": 52,
     "translatedName": "The Pen",
     "slug": [
-      "al-qalam",
-      "alqalam",
       "qalam",
       "qlm",
-      "al-qualam",
-      "alqualam",
       "qualam",
-      "al-klam",
-      "alkalam",
+      "klam",
       "kalam",
       "klm",
       "pen",
       "nun",
       "noon",
-      "al-qalm"
+      "qalm"
     ]
   },
   "69": {
@@ -1419,18 +1289,12 @@ export const quranData = {
     "versesCount": 52,
     "translatedName": "The Reality",
     "slug": [
-      "al-haqqah",
-      "alhaqqah",
       "haqqah",
       "hqqh",
-      "al-hakkah",
-      "alhakkah",
       "hakkah",
       "hkkh",
       "reality",
       "inevitable",
-      "al-haaqa",
-      "alhaaqqah",
       "haaqa"
     ]
   },
@@ -1440,35 +1304,23 @@ export const quranData = {
     "versesCount": 44,
     "translatedName": "The Ascending Stairways",
     "slug": [
-      "al-maarij",
-      "almaarij",
-      "ma'aarij",
-      "al-marij",
-      "almarij",
-      "ma'arij",
       "maarij",
+      "ma'aarij",
       "marij",
+      "ma'arij",
       "mrj",
-      "al-mayarij",
-      "almayarij",
       "mayarij",
       "ma'ayarij",
-      "al-maariz",
-      "almaariz",
       "maariz",
       "mayariz",
       "ma'aariz",
-      "al-mariz",
-      "almariz",
-      "ma'ariz",
       "mariz",
+      "ma'ariz",
       "mrz",
-      "al-mayariz",
-      "almayariz",
       "ma'ayariz",
       "stairways",
       "ascending",
-      "al-ma'aarej"
+      "ma'aarej"
     ]
   },
   "71": {
@@ -1481,8 +1333,6 @@ export const quranData = {
       "nh",
       "noah",
       "nooh",
-      "al-nuh",
-      "alnooh",
       "noh"
     ]
   },
@@ -1492,18 +1342,14 @@ export const quranData = {
     "versesCount": 28,
     "translatedName": "The Jinn",
     "slug": [
-      "al-jinn",
-      "aljinn",
       "jinn",
       "jn",
       "jin",
-      "al-jen",
-      "al-zinn",
-      "alzinn",
+      "jen",
       "zinn",
       "zn",
       "zin",
-      "al-zen"
+      "zen"
     ]
   },
   "73": {
@@ -1512,16 +1358,12 @@ export const quranData = {
     "versesCount": 20,
     "translatedName": "The Enshrouded One",
     "slug": [
-      "al-muzzammil",
-      "almuzzammil",
       "muzzammil",
       "mzml",
-      "al-mujjammil",
-      "almujjammil",
       "mujjammil",
       "enshrouded",
       "wrapped",
-      "al-mozammel"
+      "mozammel"
     ]
   },
   "74": {
@@ -1530,21 +1372,15 @@ export const quranData = {
     "versesCount": 56,
     "translatedName": "The Cloaked One",
     "slug": [
-      "al-muddaththir",
-      "almuddaththir",
       "muddaththir",
       "mdththr",
-      "al-muddassir",
-      "almuddassir",
       "muddassir",
       "mdsshr",
-      "al-muddaschir",
-      "almuddaschir",
       "muddaschir",
       "mdschr",
       "cloaked",
       "covered",
-      "al-modaser"
+      "modaser"
     ]
   },
   "75": {
@@ -1553,19 +1389,15 @@ export const quranData = {
     "versesCount": 40,
     "translatedName": "The Resurrection",
     "slug": [
-      "al-qiyamah",
       "qiyamah",
       "qymh",
-      "al-kiyamah",
       "kiyamah",
       "kymh",
-      "al-qiyama",
       "qiyama",
-      "al-kiyama",
       "kiyama",
       "resurrection",
       "rising",
-      "al-qeyaama"
+      "qeyaama"
     ]
   },
   "76": {
@@ -1574,7 +1406,6 @@ export const quranData = {
     "versesCount": 31,
     "translatedName": "The Man",
     "slug": [
-      "al-insan",
       "insan",
       "insn",
       "ad-dahr",
@@ -1582,7 +1413,7 @@ export const quranData = {
       "dahr",
       "man",
       "human",
-      "al-ensaan"
+      "ensaan"
     ]
   },
   "77": {
@@ -1591,16 +1422,12 @@ export const quranData = {
     "versesCount": 50,
     "translatedName": "The Emissaries",
     "slug": [
-      "al-mursalat",
-      "almursalat",
       "mursalat",
-      "al-mursalaat",
-      "almursalaat",
       "mursalaat",
       "mrslt",
       "emissaries",
       "sent",
-      "al-morsalaat"
+      "morsalaat"
     ]
   },
   "78": {
@@ -1675,16 +1502,12 @@ export const quranData = {
     "versesCount": 19,
     "translatedName": "The Cleaving",
     "slug": [
-      "al-infitar",
-      "alinfitar",
       "infitar",
       "nftr",
-      "al-infitwar",
-      "alinfitwar",
       "infitwar",
       "nftwr",
       "cleaving",
-      "al-enfe'taar"
+      "enfe'taar"
     ]
   },
   "83": {
@@ -1693,13 +1516,12 @@ export const quranData = {
     "versesCount": 36,
     "translatedName": "The Defrauding",
     "slug": [
-      "al-mutaffifin",
       "mutaffifin",
       "mtffn",
       "mtfffn",
       "defrauding",
       "cheating",
-      "al-motafefeen"
+      "motafefeen"
     ]
   },
   "84": {
@@ -1708,13 +1530,11 @@ export const quranData = {
     "versesCount": 25,
     "translatedName": "The Sundering",
     "slug": [
-      "al-inshiqaq",
-      "alinshiqaq",
       "inshiqaq",
       "nshqq",
       "sundering",
       "splitting",
-      "al-ensheqaaq"
+      "ensheqaaq"
     ]
   },
   "85": {
@@ -1723,18 +1543,14 @@ export const quranData = {
     "versesCount": 22,
     "translatedName": "The Mansions of the Stars",
     "slug": [
-      "al-buruj",
-      "alburuj",
       "buruj",
       "brj",
-      "al-buruz",
-      "alburuz",
       "buruz",
       "brz",
       "mansions",
       "stars",
       "constellations",
-      "al-borooj"
+      "borooj"
     ]
   },
   "86": {
@@ -1762,13 +1578,12 @@ export const quranData = {
     "versesCount": 19,
     "translatedName": "The Most High",
     "slug": [
-      "al-ala",
+      "a",
       "aala",
       "a'la",
-      "ala",
       "most-high",
       "highest",
-      "al-a'laa"
+      "a'laa"
     ]
   },
   "88": {
@@ -1777,17 +1592,13 @@ export const quranData = {
     "versesCount": 26,
     "translatedName": "The Overwhelming",
     "slug": [
-      "al-ghashiyah",
-      "alghashiyah",
       "ghashiyah",
       "ghshyh",
-      "al-gashiyah",
-      "algashiyah",
       "gashiyah",
       "gshyh",
       "overwhelming",
       "enveloper",
-      "al-ghaashiya"
+      "ghaashiya"
     ]
   },
   "89": {
@@ -1796,15 +1607,11 @@ export const quranData = {
     "versesCount": 30,
     "translatedName": "The Dawn",
     "slug": [
-      "al-fajr",
-      "alfajr",
       "fajr",
       "fjr",
-      "al-fazr",
-      "alfazr",
       "fazr",
       "fzr",
-      "al-fajer"
+      "fajer"
     ]
   },
   "90": {
@@ -1813,8 +1620,6 @@ export const quranData = {
     "versesCount": 20,
     "translatedName": "The City",
     "slug": [
-      "al-balad",
-      "albalad",
       "balad",
       "bld",
       "city",
@@ -1842,18 +1647,12 @@ export const quranData = {
     "versesCount": 21,
     "translatedName": "The Night",
     "slug": [
-      "al-layl",
-      "allayl",
       "layl",
       "lyl",
-      "al-lail",
-      "allail",
       "lail",
       "layil",
-      "allayil",
-      "al-layil",
       "night",
-      "al-laiel"
+      "laiel"
     ]
   },
   "93": {
@@ -1883,12 +1682,10 @@ export const quranData = {
       "ash-sharh",
       "ashsharh",
       "sharh",
-      "alamnashrah",
-      "alam-nashrah",
-      "alamnashra",
+      "amnashrah",
+      "am-nashrah",
+      "amnashra",
       "inshirah",
-      "al-inshirah",
-      "alinshirah",
       "shrh",
       "inshrh",
       "relief",
@@ -1918,16 +1715,14 @@ export const quranData = {
     "versesCount": 19,
     "translatedName": "The Clot",
     "slug": [
-      "al-alaq",
-      "allaq",
-      "alaq",
-      "al-alak",
-      "allak",
-      "alak",
+      "aq",
+      "laq",
+      "ak",
+      "lak",
       "clot",
       "read",
       "iqra",
-      "al-'alaq"
+      "'alaq"
     ]
   },
   "97": {
@@ -1936,18 +1731,14 @@ export const quranData = {
     "versesCount": 5,
     "translatedName": "The Power",
     "slug": [
-      "al-qadr",
-      "alqadr",
       "qadr",
       "qdr",
-      "al-kadr",
-      "alkadr",
       "kadr",
       "kdr",
       "power",
       "decree",
       "destiny",
-      "al-qader"
+      "qader"
     ]
   },
   "98": {
@@ -1956,13 +1747,11 @@ export const quranData = {
     "versesCount": 8,
     "translatedName": "The Clear Proof",
     "slug": [
-      "al-bayyinah",
-      "albayyinah",
       "bayyinah",
       "byynh",
       "clear-proof",
       "evidence",
-      "al-bayena"
+      "bayena"
     ]
   },
   "99": {
@@ -1980,13 +1769,10 @@ export const quranData = {
       "azzilzal",
       "azzhilzhal",
       "az-zalzalah",
-      "al-zalzalah",
       "zalzalah",
       "aj-jaljalah",
-      "al-jaljalah",
       "jaljalah",
       "ajh-jhaljhalah",
-      "al-jhaljhalah",
       "jhaljhalah",
       "zlzlh",
       "earthquake",
@@ -2000,14 +1786,12 @@ export const quranData = {
     "versesCount": 11,
     "translatedName": "The Courser",
     "slug": [
-      "al-adiyat",
-      "aladiyat",
-      "'adiyat",
       "adiyat",
+      "'adiyat",
       "adiya",
       "courser",
       "chargers",
-      "al-'aadeyaat"
+      "'aadeyaat"
     ]
   },
   "101": {
@@ -2016,13 +1800,11 @@ export const quranData = {
     "versesCount": 11,
     "translatedName": "The Calamity",
     "slug": [
-      "al-qariah",
-      "alqariah",
       "qariah",
       "qryh",
       "calamity",
       "striking",
-      "al-qaare'a"
+      "qaare'a"
     ]
   },
   "102": {
@@ -2050,16 +1832,12 @@ export const quranData = {
     "versesCount": 3,
     "translatedName": "The Declining Day",
     "slug": [
-      "al-asr",
-      "alasr",
       "asr",
-      "al-asor",
-      "alasor",
       "asor",
       "declining",
       "time",
       "afternoon",
-      "al-'aser"
+      "'aser"
     ]
   },
   "104": {
@@ -2068,17 +1846,13 @@ export const quranData = {
     "versesCount": 9,
     "translatedName": "The Traducer",
     "slug": [
-      "al-humazah",
-      "alhumazah",
       "humazah",
       "hmzh",
-      "al-humajah",
-      "alhumajah",
       "humajah",
       "hmjh",
       "traducer",
       "slanderer",
-      "al-homaza"
+      "homaza"
     ]
   },
   "105": {
@@ -2087,12 +1861,8 @@ export const quranData = {
     "versesCount": 5,
     "translatedName": "The Elephant",
     "slug": [
-      "al-fil",
-      "alfil",
       "fil",
       "fl",
-      "al-feel",
-      "alfeel",
       "feel",
       "fel",
       "elephant"
@@ -2120,13 +1890,12 @@ export const quranData = {
     "versesCount": 7,
     "translatedName": "The Small kindnesses",
     "slug": [
-      "al-maun",
-      "almaun",
+      "maun",
       "ma'un",
       "mun",
       "kindness",
       "charity",
-      "al-maa'oon"
+      "maa'oon"
     ]
   },
   "108": {
@@ -2135,17 +1904,13 @@ export const quranData = {
     "versesCount": 3,
     "translatedName": "The Abundance",
     "slug": [
-      "al-kawthar",
-      "alkawthar",
       "kawthar",
       "kwthr",
-      "al-kawsar",
-      "alkawsar",
       "kawsar",
       "kwsr",
       "abundance",
       "plenty",
-      "al-kausar"
+      "kausar"
     ]
   },
   "109": {
@@ -2154,15 +1919,11 @@ export const quranData = {
     "versesCount": 6,
     "translatedName": "The Disbelievers",
     "slug": [
-      "al-kafirun",
-      "alkafirun",
       "kafirun",
-      "al-kafiroon",
-      "alkafiroon",
       "kafiroon",
       "kfrn",
       "disbelievers",
-      "al-kaafiroon"
+      "kaafiroon"
     ]
   },
   "110": {
@@ -2190,11 +1951,8 @@ export const quranData = {
     "versesCount": 5,
     "translatedName": "The Palm Fiber",
     "slug": [
-      "al-lahab",
-      "allahab",
       "lahab",
       "lhb",
-      "al-masad",
       "masad",
       "msd",
       "palm-fiber"
@@ -2206,16 +1964,12 @@ export const quranData = {
     "versesCount": 4,
     "translatedName": "The Sincerity",
     "slug": [
-      "al-ikhlas",
-      "alikhlas",
       "ikhlas",
-      "al-ikhlaas",
-      "alikhlaas",
       "ikhlaas",
       "khls",
       "sincerity",
       "purity",
-      "al-ekhlaas"
+      "ekhlaas"
     ]
   },
   "113": {
@@ -2224,17 +1978,13 @@ export const quranData = {
     "versesCount": 5,
     "translatedName": "The Daybreak",
     "slug": [
-      "al-falaq",
-      "alfalaq",
       "falaq",
       "flq",
-      "al-falak",
-      "alfalak",
       "falak",
       "flk",
       "daybreak",
       "dawn",
-      "al-falq",
+      "falq"
     ]
   },
   "114": {
@@ -2248,7 +1998,7 @@ export const quranData = {
       "nas",
       "mankind",
       "people",
-      "an-naas",
+      "an-naas"
     ]
   }
 };
