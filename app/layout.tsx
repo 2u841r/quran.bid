@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import PlausibleProvider from "next-plausible";
+// import PlausibleProvider from "next-plausible";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,9 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <PlausibleProvider domain="quran.bid">
+        {/* <PlausibleProvider domain="quran.bid">
+        </PlausibleProvider> */}
         {children}
-        </PlausibleProvider>
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ import SocialBrowserDetector from "unsocial";
 
 import QuranRedirectInfo from "@/components/QuranRedirectInfo";
 import { useState, useEffect } from "react";
-import { usePlausible } from "next-plausible";
+// import { usePlausible } from "next-plausible";
 
 export default function QuranAyah() {
   const [inputValue, setInputValue] = useState("2:21");
@@ -13,7 +13,7 @@ export default function QuranAyah() {
   const [brackets, setBrackets] = useState(true);
   const [ref, setRef] = useState(true);
 
-  const plausible = usePlausible();
+  // const plausible = usePlausible();
 
   useEffect(() => {
     const fetchAyah = async () => {
@@ -54,7 +54,7 @@ export default function QuranAyah() {
   }, [surahAyah, ref]);
 
   const handleSubmit = () => {
-    plausible("search-ayah");
+    // plausible("search-ayah");
     setSurahAyah(inputValue);
   };
 
@@ -112,7 +112,6 @@ export default function QuranAyah() {
         />
         <button
           onClick={() => {
-            plausible("go-button");
             handleSubmit();
           }}
           className="bg-blue-500 text-white px-4 py-2 rounded-r hover:bg-blue-600"
@@ -156,7 +155,6 @@ export default function QuranAyah() {
       <div className="mt-4 flex justify-center gap-4">
         <button
           onClick={() => {
-            plausible("toggle-brackets");
             setBrackets(!brackets);
           }}
           className={`px-4 py-2 border rounded ${
@@ -170,7 +168,6 @@ export default function QuranAyah() {
 
         <button
           onClick={() => {
-            plausible("toggle-ref");
             setRef(!ref);
           }}
           className={`px-4 py-2 border rounded ${
@@ -188,7 +185,6 @@ export default function QuranAyah() {
         <a
           className="text-blue-600 dark:text-blue-300"
           href="https://wa.me/8801832776884"
-          onClick={() => plausible("contact-whatsapp")}
         >
           {" "}
           Zubair Ibn Zamir
