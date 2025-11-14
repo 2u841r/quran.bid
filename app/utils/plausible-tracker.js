@@ -1,46 +1,46 @@
 // Helper function to send events to Umami Analytics
 // Configure via environment variables:
-// - UMAMI_URL: Your Umami server URL (e.g., https://umami.example.com)
-// - UMAMI_WEBSITE_ID: Your website ID from Umami dashboard
+// - UMAMI_URL: Your Umami server URL (e.g., https://cloud.umami.is)
+// - UMAMI_WEBSITE_ID or NEXT_PUBLIC_UMAMI_WEBSITE_ID: Your website ID from Umami dashboard
 // - UMAMI_API_KEY: (Optional) API key for authentication
 export async function trackUmamiEvent(request, eventName, eventData = {}) {
   try {
-    const umamiUrl = process.env.UMAMI_URL
-    const websiteId = process.env.UMAMI_WEBSITE_ID
+    // Support both server-side and client-side env var names
+    const umamiUrl = process.env.UMAMI_URL || 'https://cloud.umami.is'
+    const websiteId = process.env.UMAMI_WEBSITE_ID || process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
     const apiKey = process.env.UMAMI_API_KEY
 
     // Skip tracking if Umami is not configured
-    if (!umamiUrl || !websiteId) {
+    if (!websiteId) {
+      console.warn('Umami tracking skipped: UMAMI_WEBSITE_ID or NEXT_PUBLIC_UMAMI_WEBSITE_ID not set')
       return
     }
 
     const userAgent = request.headers.get('user-agent') || ''
-    const clientIP = request.headers.get('x-forwarded-for') || 
-                     request.headers.get('x-real-ip') || 
-                     request.ip || '127.0.0.1'
-
-    // Extract the first IP if there are multiple
-    const ip = clientIP.split(',')[0].trim()
+    const referrer = request.headers.get('referer') || ''
 
     // Get the full URL path
     const url = new URL(request.url)
     const pathname = url.pathname
 
-    // Umami event payload format
-    // Reference: https://docs.umami.is/docs/api/events
+    // Umami collect API payload format
+    // For custom events, we send event_name and optionally event_data
     const umamiPayload = {
       website: websiteId,
       url: pathname,
+      referrer: referrer,
       event_name: eventName,
-      event_data: eventData,
-      hostname: url.hostname,
-      referrer: request.headers.get('referer') || '',
+    }
+
+    // Add event_data if provided (as a JSON string in the payload)
+    if (Object.keys(eventData).length > 0) {
+      // Umami expects event_data as a stringified JSON object
+      umamiPayload.event_data = JSON.stringify(eventData)
     }
 
     const headers = {
       'Content-Type': 'application/json',
       'User-Agent': userAgent,
-      'X-Forwarded-For': ip,
     }
 
     // Add API key if provided
@@ -48,14 +48,33 @@ export async function trackUmamiEvent(request, eventName, eventData = {}) {
       headers['x-umami-api-key'] = apiKey
     }
 
+    // Normalize URL - ensure it has protocol and no trailing slash
+    let normalizedUrl = umamiUrl.trim()
+    if (!normalizedUrl.startsWith('http://') && !normalizedUrl.startsWith('https://')) {
+      normalizedUrl = `https://${normalizedUrl}`
+    }
+    normalizedUrl = normalizedUrl.replace(/\/$/, '')
+
+    const collectUrl = `${normalizedUrl}/api/collect`
+
     // Send event to Umami's collect endpoint
-    await fetch(`${umamiUrl}/api/collect`, {
+    const response = await fetch(collectUrl, {
       method: 'POST',
       headers,
       body: JSON.stringify(umamiPayload),
     })
+
+    if (!response.ok) {
+      console.error(`Umami tracking failed: ${response.status} ${response.statusText}`, {
+        url: collectUrl,
+        payload: umamiPayload,
+      })
+    }
   } catch (error) {
-    console.error('Failed to track Umami event:', error)
+    console.error('Failed to track Umami event:', error.message, {
+      eventName,
+      url: request.url,
+    })
     // Don't throw - analytics failure shouldn't break the API
   }
 }
