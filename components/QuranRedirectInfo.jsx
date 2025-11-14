@@ -30,6 +30,7 @@ export default function QuranRedirectInfo() {
   }, []);
 
   return (
+    <>
     <div className="max-w-4xl mx-auto p-2">
       <div className="text-center mb-2">
         <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-300 mb-4">
@@ -111,28 +112,29 @@ export default function QuranRedirectInfo() {
           Try visiting any of these URLs to see the redirect in action:
         </p>
         <div className="mt-4 space-y-2">
-          <a
+          <Link
             href="/baqarah/1"
             className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
           >
             /baqarah/1
-          </a>
+          </Link>
           <br />
-          <a
+          <Link
             href="/fatihah"
             className="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-colors"
           >
             /fatihah
-          </a>
+          </Link>
           <br />
-          <a
+          <Link
             href="/ya-sin/83"
             className="inline-block bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors"
           >
             /ya-sin/83
-          </a>
+          </Link>
         </div>
       </div>
     </div>
+    </>
   );
 }
