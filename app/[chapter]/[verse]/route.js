@@ -1,40 +1,7 @@
 import { NextResponse } from 'next/server'
-import { resolveChapter, slugToChapter, quranData } from '../../utils/quran-utils'
-
+import { resolveChapter, quranData } from '../../utils/quran-utils'
+import { trackUmamiEvent } from '../../utils/plausible-tracker'
 import { Logger } from 'next-axiom'
-
-// Helper function to send events to Plausible
-// async function trackPlausibleEvent(request, eventName, props = {}) {
-//   try {
-//     const userAgent = request.headers.get('user-agent') || ''
-//     const clientIP = request.headers.get('x-forwarded-for') || 
-//                      request.headers.get('x-real-ip') || 
-//                      request.ip || '127.0.0.1'
-
-//     // Extract the first IP if there are multiple
-//     const ip = clientIP.split(',')[0].trim()
-
-//     const plausiblePayload = {
-//       domain: 'quran.bid',
-//       name: eventName,
-//       url: `https://quran.bid${new URL(request.url).pathname}`,
-//       props: props,
-//     }
-
-//     await fetch('https://ppp.qawmputer.com/api/event', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//         'User-Agent': userAgent,
-//         'X-Forwarded-For': ip,
-//       },
-//       body: JSON.stringify(plausiblePayload),
-//     })
-//   } catch (error) {
-//     console.error('Failed to track Plausible event:', error)
-//     // Don't throw - analytics failure shouldn't break the API
-//   }
-// }
 
 export async function GET(request, { params }) {
   const logger = new Logger({ source: 'middleware' })
@@ -59,11 +26,11 @@ export async function GET(request, { params }) {
         })
 
         // Track error event
-        // await trackPlausibleEvent(request, 'Chapter Data Missing', {
-        //   chapter: String(chapter),
-        //   chapterNumber: String(chapterNumber),
-        //   verse: String(verse),
-        // })
+        await trackUmamiEvent(request, 'Chapter Data Missing', {
+          chapter: String(chapter),
+          chapterNumber: String(chapterNumber),
+          verse: String(verse),
+        })
 
         await logger.flush()
         return NextResponse.json({
@@ -87,12 +54,12 @@ export async function GET(request, { params }) {
         })
 
         // Track invalid verse event
-        // await trackPlausibleEvent(request, 'Invalid Verse Number', {
-        //   chapter: String(chapter),
-        //   verse: String(verse),
-        //   chapterNumber: String(chapterNumber),
-        //   maxVerses: chapterData.versesCount,
-        // })
+        await trackUmamiEvent(request, 'Invalid Verse Number', {
+          chapter: String(chapter),
+          verse: String(verse),
+          chapterNumber: String(chapterNumber),
+          maxVerses: chapterData.versesCount,
+        })
 
         // Flush logs before returning JSON response
         await logger.flush()
@@ -117,12 +84,12 @@ export async function GET(request, { params }) {
       })
 
       // Track successful redirect
-      // await trackPlausibleEvent(request, 'Chapter Redirect Success', {
-      //   chapter: String(chapter),
-      //   verse: String(verse),
-      //   chapterNumber: String(chapterNumber),
-      //   chapterName: chapterData.transliteratedName,
-      // })
+      await trackUmamiEvent(request, 'Chapter Redirect Success', {
+        chapter: String(chapter),
+        verse: String(verse),
+        chapterNumber: String(chapterNumber),
+        chapterName: chapterData.transliteratedName,
+      })
 
       const redirectUrl = `https://quran.com/${chapterNumber}/${verse}`
       // Flush logs before redirect
@@ -140,10 +107,10 @@ export async function GET(request, { params }) {
     })
 
     // Track chapter not found event
-    // await trackPlausibleEvent(request, 'Chapter Not Found', {
-    //   chapter: String(chapter),
-    //   verse: String(verse),
-    // })
+    await trackUmamiEvent(request, 'Chapter Not Found', {
+      chapter: String(chapter),
+      verse: String(verse),
+    })
 
     // Flush logs before returning JSON response
     await logger.flush()
@@ -160,9 +127,9 @@ export async function GET(request, { params }) {
     logger.error('❌ Unhandled error in [chapter]/[verse] route', { message, stack })
 
     // Track server error event
-    // await trackPlausibleEvent(request, 'Server Error', {
-    //   error: message,
-    // })
+    await trackUmamiEvent(request, 'Server Error', {
+      error: message,
+    })
 
     await logger.flush()
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
