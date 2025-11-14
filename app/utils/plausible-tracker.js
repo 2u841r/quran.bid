@@ -22,20 +22,35 @@ export async function trackUmamiEvent(request, eventName, eventData = {}) {
     // Get the full URL path
     const url = new URL(request.url)
     const pathname = url.pathname
+    const hostname = url.hostname
 
-    // Umami collect API payload format
-    // For custom events, we send event_name and optionally event_data
-    const umamiPayload = {
-      website: websiteId,
-      url: pathname,
-      referrer: referrer,
-      event_name: eventName,
+    // Get client IP
+    const clientIP = request.headers.get('x-forwarded-for') || 
+                     request.headers.get('x-real-ip') || 
+                     request.ip || '127.0.0.1'
+    const ip = clientIP.split(',')[0].trim()
+
+    // Normalize URL - ensure it has protocol and no trailing slash
+    let normalizedUrl = umamiUrl.trim()
+    if (!normalizedUrl.startsWith('http://') && !normalizedUrl.startsWith('https://')) {
+      normalizedUrl = `https://${normalizedUrl}`
     }
+    normalizedUrl = normalizedUrl.replace(/\/$/, '')
 
-    // Add event_data if provided (as a JSON string in the payload)
-    if (Object.keys(eventData).length > 0) {
-      // Umami expects event_data as a stringified JSON object
-      umamiPayload.event_data = JSON.stringify(eventData)
+    // Use /api/send endpoint for Umami Cloud (supports server-side tracking)
+    const sendUrl = `${normalizedUrl}/api/send`
+
+    // Prepare payload according to Umami's API spec
+    const payload = {
+      type: 'event',
+      payload: {
+        website: websiteId,
+        hostname: hostname,
+        url: pathname,
+        referrer: referrer || '',
+        name: eventName,
+        data: eventData,
+      }
     }
 
     const headers = {
@@ -48,31 +63,36 @@ export async function trackUmamiEvent(request, eventName, eventData = {}) {
       headers['x-umami-api-key'] = apiKey
     }
 
-    // Normalize URL - ensure it has protocol and no trailing slash
-    let normalizedUrl = umamiUrl.trim()
-    if (!normalizedUrl.startsWith('http://') && !normalizedUrl.startsWith('https://')) {
-      normalizedUrl = `https://${normalizedUrl}`
-    }
-    normalizedUrl = normalizedUrl.replace(/\/$/, '')
-
-    const collectUrl = `${normalizedUrl}/api/collect`
-
-    // Send event to Umami's collect endpoint
-    const response = await fetch(collectUrl, {
+    console.log('📊 Sending to Umami:', { sendUrl, eventName, eventData })
+    
+    const response = await fetch(sendUrl, {
       method: 'POST',
       headers,
-      body: JSON.stringify(umamiPayload),
+      body: JSON.stringify(payload),
+    })
+
+    console.log('📊 Umami response:', {
+      status: response.status,
+      statusText: response.statusText,
+      ok: response.ok,
+      eventName,
     })
 
     if (!response.ok) {
+      const responseText = await response.text().catch(() => 'Unable to read response')
       console.error(`Umami tracking failed: ${response.status} ${response.statusText}`, {
-        url: collectUrl,
-        payload: umamiPayload,
+        url: sendUrl,
+        eventName,
+        eventData,
+        responseBody: responseText,
       })
+    } else {
+      console.log('✅ Umami tracking successful:', eventName)
     }
   } catch (error) {
     console.error('Failed to track Umami event:', error.message, {
       eventName,
+      eventData,
       url: request.url,
     })
     // Don't throw - analytics failure shouldn't break the API
@@ -81,4 +101,3 @@ export async function trackUmamiEvent(request, eventName, eventData = {}) {
 
 // Keep the old function name for backward compatibility (deprecated)
 export const trackPlausibleEvent = trackUmamiEvent
-
