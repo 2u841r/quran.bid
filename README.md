@@ -13,4 +13,4 @@ npm run dev
 pnpm run dev
 ```
 
-![](https://rs2.deno.dev/2u841r/quran.bid)
+![](https://repostats.zizdjbd.workers.dev/2u841r/quran.bid)
